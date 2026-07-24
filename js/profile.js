@@ -59,11 +59,11 @@ function initEditForm() {
 
     const users = getUsers();
     const current = users.find((u) => u.id === getSession().userId);
-    current.fullName = fullName;   // 1️⃣ state
+    current.fullName = fullName;   
     current.company = company;
-    saveUsers(users);              // 2️⃣ save
+    saveUsers(users);              
 
-    renderInfo(current);           // 3️⃣ render (info block updates immediately)
+    renderInfo(current);           
     showToast("Profile updated ✓", "success");
   });
 }
