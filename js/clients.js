@@ -119,6 +119,7 @@ function createClientCard(client) {
 }
 
 //RENDER a list of clients (clients cards) into page
+//with append it's a bit heavy, we could use DocumentFragment instead:) could we?. 
 function renderClients(list) {
   clientsList.innerHTML = ""; //clear the container
 
@@ -183,6 +184,7 @@ function initAddClient() {
     clearErrors(addClientForm);
 
     //use of .elements
+    //but here could be used obj Destructuring!!!!!!!
     const fields = addClientForm.elements;
 
     const name = fields.name.value.trim();
